@@ -25,7 +25,40 @@
 		7E6529222A9D7C78004F466B /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529212A9D7C78004F466B /* DateView.swift */; };
 		7E6529242A9D7DB5004F466B /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529232A9D7DB5004F466B /* DateViewController.swift */; };
 		7E6529282A9D8E9A004F466B /* DateFormat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529272A9D8E9A004F466B /* DateFormat+Extension.swift */; };
+		7E65295B2A9D9BBF004F466B /* SeSACPhotoFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6529572A9D9B36004F466B /* SeSACPhotoFramework.framework */; };
+		7E65295C2A9D9BBF004F466B /* SeSACPhotoFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6529572A9D9B36004F466B /* SeSACPhotoFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E6529562A9D9B36004F466B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E6529512A9D9B36004F466B /* SeSACPhotoFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7E6529332A9D92AC004F466B;
+			remoteInfo = SeSACPhotoFramework;
+		};
+		7E6529582A9D9B36004F466B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E6529512A9D9B36004F466B /* SeSACPhotoFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7E65293D2A9D92AC004F466B;
+			remoteInfo = SeSACPhotoFrameworkTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7E65295D2A9D9BBF004F466B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7E65295C2A9D9BBF004F466B /* SeSACPhotoFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7E6528E72A9C1D69004F466B /* PhotoJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +80,7 @@
 		7E6529212A9D7C78004F466B /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		7E6529232A9D7DB5004F466B /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		7E6529272A9D8E9A004F466B /* DateFormat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormat+Extension.swift"; sourceTree = "<group>"; };
+		7E6529512A9D9B36004F466B /* SeSACPhotoFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSACPhotoFramework.xcodeproj; path = ../SeSACPhotoFramework/SeSACPhotoFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E65295B2A9D9BBF004F466B /* SeSACPhotoFramework.framework in Frameworks */,
 				7E6529002A9C1E1F004F466B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,8 +99,10 @@
 		7E6528DE2A9C1D69004F466B = {
 			isa = PBXGroup;
 			children = (
+				7E6529512A9D9B36004F466B /* SeSACPhotoFramework.xcodeproj */,
 				7E6528E92A9C1D69004F466B /* PhotoJournal */,
 				7E6528E82A9C1D69004F466B /* Products */,
+				7E65295A2A9D9BBF004F466B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +179,22 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		7E6529522A9D9B36004F466B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E6529572A9D9B36004F466B /* SeSACPhotoFramework.framework */,
+				7E6529592A9D9B36004F466B /* SeSACPhotoFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E65295A2A9D9BBF004F466B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +205,7 @@
 				7E6528E32A9C1D69004F466B /* Sources */,
 				7E6528E42A9C1D69004F466B /* Frameworks */,
 				7E6528E52A9C1D69004F466B /* Resources */,
+				7E65295D2A9D9BBF004F466B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,12 +248,35 @@
 			);
 			productRefGroup = 7E6528E82A9C1D69004F466B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7E6529522A9D9B36004F466B /* Products */;
+					ProjectRef = 7E6529512A9D9B36004F466B /* SeSACPhotoFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7E6528E62A9C1D69004F466B /* PhotoJournal */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7E6529572A9D9B36004F466B /* SeSACPhotoFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SeSACPhotoFramework.framework;
+			remoteRef = 7E6529562A9D9B36004F466B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7E6529592A9D9B36004F466B /* SeSACPhotoFrameworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SeSACPhotoFrameworkTests.xctest;
+			remoteRef = 7E6529582A9D9B36004F466B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7E6528E52A9C1D69004F466B /* Resources */ = {
@@ -377,7 +454,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,7 +484,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -41,7 +41,8 @@ class SearchView: BaseView {
         }
     }
     
-    func configCollectionViewLayout() -> UICollectionViewFlowLayout {
+    // 클래스 밖에서 호출할 일 없고 내에서만 사용될 함수 -> private
+    private func configCollectionViewLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SeSACPhotoFramework
 
 // Protocol 값 전달 1.
 protocol PassDataDelegate {
@@ -34,6 +35,12 @@ class AddViewController: BaseViewController {
 //            name: NSNotification.Name("SelectedImage"),
 //            object: nil
 //        )
+        
+//        ClassOpenExample.publicExample()
+//        ClassPublicExample.publicExample()
+//        ClassPublicExample.internalExample()
+//        ClassInternalExample
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +52,8 @@ class AddViewController: BaseViewController {
             name: .selectedImage,
             object: nil
         )
+        
+        sesacShowActivityViewController(image: UIImage(systemName: "star")!, url: "hello", text: "hi")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
