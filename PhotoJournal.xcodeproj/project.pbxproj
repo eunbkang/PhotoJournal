@@ -21,6 +21,10 @@
 		7E65290F2A9C3660004F466B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65290E2A9C3660004F466B /* BaseCollectionViewCell.swift */; };
 		7E6529112A9C37DB004F466B /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529102A9C37DB004F466B /* ReusableViewProtocol.swift */; };
 		7E6529132A9C37FB004F466B /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529122A9C37FB004F466B /* SearchCollectionViewCell.swift */; };
+		7E6529202A9D7BD4004F466B /* NSNotification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65291F2A9D7BD4004F466B /* NSNotification+Extension.swift */; };
+		7E6529222A9D7C78004F466B /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529212A9D7C78004F466B /* DateView.swift */; };
+		7E6529242A9D7DB5004F466B /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529232A9D7DB5004F466B /* DateViewController.swift */; };
+		7E6529282A9D8E9A004F466B /* DateFormat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529272A9D8E9A004F466B /* DateFormat+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		7E65290E2A9C3660004F466B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E6529102A9C37DB004F466B /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		7E6529122A9C37FB004F466B /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		7E65291F2A9D7BD4004F466B /* NSNotification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extension.swift"; sourceTree = "<group>"; };
+		7E6529212A9D7C78004F466B /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		7E6529232A9D7DB5004F466B /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		7E6529272A9D8E9A004F466B /* DateFormat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormat+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 		7E6528E92A9C1D69004F466B /* PhotoJournal */ = {
 			isa = PBXGroup;
 			children = (
+				7E65291E2A9D7BB5004F466B /* Extension */,
 				7E6529142A9C38FF004F466B /* Protocol */,
 				7E6529012A9C2403004F466B /* Base */,
 				7E6529092A9C2FC5004F466B /* Add */,
@@ -110,6 +119,8 @@
 			children = (
 				7E6528EE2A9C1D69004F466B /* AddViewController.swift */,
 				7E65290A2A9C2FEF004F466B /* AddView.swift */,
+				7E6529212A9D7C78004F466B /* DateView.swift */,
+				7E6529232A9D7DB5004F466B /* DateViewController.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -120,6 +131,15 @@
 				7E6529102A9C37DB004F466B /* ReusableViewProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		7E65291E2A9D7BB5004F466B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7E65291F2A9D7BD4004F466B /* NSNotification+Extension.swift */,
+				7E6529272A9D8E9A004F466B /* DateFormat+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,14 +219,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E65290B2A9C2FEF004F466B /* AddView.swift in Sources */,
+				7E6529222A9D7C78004F466B /* DateView.swift in Sources */,
+				7E6529242A9D7DB5004F466B /* DateViewController.swift in Sources */,
 				7E6529112A9C37DB004F466B /* ReusableViewProtocol.swift in Sources */,
 				7E6529132A9C37FB004F466B /* SearchCollectionViewCell.swift in Sources */,
 				7E6529062A9C274C004F466B /* SearchViewController.swift in Sources */,
 				7E65290F2A9C3660004F466B /* BaseCollectionViewCell.swift in Sources */,
+				7E6529202A9D7BD4004F466B /* NSNotification+Extension.swift in Sources */,
 				7E6528EF2A9C1D69004F466B /* AddViewController.swift in Sources */,
 				7E6529032A9C2421004F466B /* BaseViewController.swift in Sources */,
 				7E65290D2A9C3371004F466B /* SearchView.swift in Sources */,
 				7E6529082A9C2EB2004F466B /* BaseView.swift in Sources */,
+				7E6529282A9D8E9A004F466B /* DateFormat+Extension.swift in Sources */,
 				7E6528EB2A9C1D69004F466B /* AppDelegate.swift in Sources */,
 				7E6528ED2A9C1D69004F466B /* SceneDelegate.swift in Sources */,
 			);
