@@ -32,6 +32,7 @@
 		7E6529652A9DC754004F466B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529642A9DC754004F466B /* WebViewController.swift */; };
 		7E65297F2A9EC751004F466B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65297E2A9EC751004F466B /* APIService.swift */; };
 		7E6529812A9EEBD8004F466B /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529802A9EEBD8004F466B /* URLSessionViewController.swift */; };
+		7E6529832A9F6E75004F466B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7E6529822A9F6E75004F466B /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		7E6529642A9DC754004F466B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7E65297E2A9EC751004F466B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		7E6529802A9EEBD8004F466B /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
+		7E6529822A9F6E75004F466B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				7E6528F52A9C1D6B004F466B /* LaunchScreen.storyboard */,
 				7E6528F82A9C1D6B004F466B /* Info.plist */,
 				7E6529642A9DC754004F466B /* WebViewController.swift */,
+				7E6529822A9F6E75004F466B /* .gitignore */,
 			);
 			path = PhotoJournal;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E6528F72A9C1D6B004F466B /* LaunchScreen.storyboard in Resources */,
+				7E6529832A9F6E75004F466B /* .gitignore in Resources */,
 				7E6528F42A9C1D6B004F466B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
