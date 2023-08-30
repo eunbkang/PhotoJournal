@@ -53,7 +53,7 @@ class AddViewController: BaseViewController {
             object: nil
         )
         
-        sesacShowActivityViewController(image: UIImage(systemName: "star")!, url: "hello", text: "hi")
+//        sesacShowActivityViewController(image: UIImage(systemName: "star")!, url: "hello", text: "hi")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -98,6 +98,31 @@ class AddViewController: BaseViewController {
         present(vc, animated: true)
     }
     
+    @objc func tappedTitleButton() {
+        let vc = TitleViewController()
+        
+        // Closure 값 전달 3.
+        // tappedTitleButton 함수는 버튼 누르고 화면 이동하고 실행이 끝나지만
+        // 클로저 안의 함수는 나중에 실행됨 -> 시점은 titleViewController에서 completionHandler 함수가 호출되는 시점
+        vc.completionHandler = { text, age, push in
+            self.addView.titleButton.setTitle(text, for: .normal)
+            print("tappedTitleButton", age, push)
+        }
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func tappedSubtitleButton() {
+        let vc = ContentViewController()
+        
+        vc.completionHandler = { text in
+            self.addView.contentButton.setTitle(text, for: .normal)
+            print("tappedSubtitleButton")
+        }
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func configViewComponents() {
         super.configViewComponents()
         
@@ -105,6 +130,8 @@ class AddViewController: BaseViewController {
         addView.searchButton.addTarget(self, action: #selector(tappedSearchButton), for: .touchUpInside)
         addView.searchProtocolButton.addTarget(self, action: #selector(tappedSearchProtocolButton), for: .touchUpInside)
         addView.dateButton.addTarget(self, action: #selector(tappedDateButton), for: .touchUpInside)
+        addView.titleButton.addTarget(self, action: #selector(tappedTitleButton), for: .touchUpInside)
+        addView.contentButton.addTarget(self, action: #selector(tappedSubtitleButton), for: .touchUpInside)
     }
 }
 

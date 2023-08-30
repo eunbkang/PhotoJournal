@@ -27,6 +27,9 @@
 		7E6529282A9D8E9A004F466B /* DateFormat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529272A9D8E9A004F466B /* DateFormat+Extension.swift */; };
 		7E65295B2A9D9BBF004F466B /* SeSACPhotoFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6529572A9D9B36004F466B /* SeSACPhotoFramework.framework */; };
 		7E65295C2A9D9BBF004F466B /* SeSACPhotoFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6529572A9D9B36004F466B /* SeSACPhotoFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7E6529612A9DB54A004F466B /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529602A9DB54A004F466B /* TitleViewController.swift */; };
+		7E6529632A9DC10C004F466B /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529622A9DC10C004F466B /* ContentViewController.swift */; };
+		7E6529652A9DC754004F466B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529642A9DC754004F466B /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		7E6529232A9D7DB5004F466B /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		7E6529272A9D8E9A004F466B /* DateFormat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormat+Extension.swift"; sourceTree = "<group>"; };
 		7E6529512A9D9B36004F466B /* SeSACPhotoFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSACPhotoFramework.xcodeproj; path = ../SeSACPhotoFramework/SeSACPhotoFramework.xcodeproj; sourceTree = "<group>"; };
+		7E6529602A9DB54A004F466B /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		7E6529622A9DC10C004F466B /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		7E6529642A9DC754004F466B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		7E6528E92A9C1D69004F466B /* PhotoJournal */ = {
 			isa = PBXGroup;
 			children = (
+				7E65297D2A9EC725004F466B /* Network */,
 				7E65291E2A9D7BB5004F466B /* Extension */,
 				7E6529142A9C38FF004F466B /* Protocol */,
 				7E6529012A9C2403004F466B /* Base */,
@@ -127,6 +134,7 @@
 				7E6528F32A9C1D6B004F466B /* Assets.xcassets */,
 				7E6528F52A9C1D6B004F466B /* LaunchScreen.storyboard */,
 				7E6528F82A9C1D6B004F466B /* Info.plist */,
+				7E6529642A9DC754004F466B /* WebViewController.swift */,
 			);
 			path = PhotoJournal;
 			sourceTree = "<group>";
@@ -158,6 +166,8 @@
 				7E65290A2A9C2FEF004F466B /* AddView.swift */,
 				7E6529212A9D7C78004F466B /* DateView.swift */,
 				7E6529232A9D7DB5004F466B /* DateViewController.swift */,
+				7E6529602A9DB54A004F466B /* TitleViewController.swift */,
+				7E6529622A9DC10C004F466B /* ContentViewController.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -193,6 +203,13 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E65297D2A9EC725004F466B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,10 +313,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E65290B2A9C2FEF004F466B /* AddView.swift in Sources */,
+				7E6529652A9DC754004F466B /* WebViewController.swift in Sources */,
 				7E6529222A9D7C78004F466B /* DateView.swift in Sources */,
+				7E6529632A9DC10C004F466B /* ContentViewController.swift in Sources */,
 				7E6529242A9D7DB5004F466B /* DateViewController.swift in Sources */,
 				7E6529112A9C37DB004F466B /* ReusableViewProtocol.swift in Sources */,
 				7E6529132A9C37FB004F466B /* SearchCollectionViewCell.swift in Sources */,
+				7E6529612A9DB54A004F466B /* TitleViewController.swift in Sources */,
 				7E6529062A9C274C004F466B /* SearchViewController.swift in Sources */,
 				7E65290F2A9C3660004F466B /* BaseCollectionViewCell.swift in Sources */,
 				7E6529202A9D7BD4004F466B /* NSNotification+Extension.swift in Sources */,

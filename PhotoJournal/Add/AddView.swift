@@ -39,17 +39,37 @@ class AddView: BaseView {
         return button
     }()
     
+    let titleButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemPink
+        button.setTitle("오늘의 사진", for: .normal)
+        button.tintColor = .white
+        
+        return button
+    }()
+    
+    let contentButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemPurple
+        button.setTitle("사진 설명", for: .normal)
+        button.tintColor = .white
+        
+        return button
+    }()
+    
     override func configViewComponents() {
         addSubview(photoImageView)
         addSubview(searchButton)
         addSubview(searchProtocolButton)
         addSubview(dateButton)
+        addSubview(titleButton)
+        addSubview(contentButton)
     }
     
     override func configLayoutConstraints() {
         photoImageView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(16)
-            make.height.equalTo(photoImageView.snp.width).multipliedBy(0.75)
+            make.height.equalTo(photoImageView.snp.width).multipliedBy(0.7)
         }
         
         searchButton.snp.makeConstraints { make in
@@ -66,6 +86,18 @@ class AddView: BaseView {
             make.top.equalTo(photoImageView.snp.bottom).offset(12)
             make.horizontalEdges.equalTo(photoImageView)
             make.height.equalTo(48)
+        }
+        
+        titleButton.snp.makeConstraints { make in
+            make.top.equalTo(dateButton.snp.bottom).offset(12)
+            make.horizontalEdges.equalTo(photoImageView)
+            make.height.equalTo(dateButton)
+        }
+        
+        contentButton.snp.makeConstraints { make in
+            make.top.equalTo(titleButton.snp.bottom).offset(12)
+            make.horizontalEdges.equalTo(photoImageView)
+            make.height.equalTo(150)
         }
     }
 }
