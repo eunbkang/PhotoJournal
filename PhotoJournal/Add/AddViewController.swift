@@ -85,11 +85,26 @@ class AddViewController: BaseViewController {
     }
     
     @objc func tappedSearchButton() {
-        let words = ["Apple", "Banana", "Cookie", "Doll", "Egg"]
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let gallery = UIAlertAction(title: "갤러리에서 가져오기", style: .default) { _ in
+            
+        }
+        let web = UIAlertAction(title: "웹에서 검색하기", style: .default) { _ in
+            self.present(SearchViewController(), animated: true)
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
         
-        NotificationCenter.default.post(name: NSNotification.Name("RecommendedKeyword"), object: nil, userInfo: ["keyword": words.randomElement()!])
+        for action in [gallery, web, cancel] {
+            actionSheet.addAction(action)
+        }
         
-        present(SearchViewController(), animated: true)
+        present(actionSheet, animated: true)
+        
+//        let words = ["Apple", "Banana", "Cookie", "Doll", "Egg"]
+        
+//        NotificationCenter.default.post(name: NSNotification.Name("RecommendedKeyword"), object: nil, userInfo: ["keyword": words.randomElement()!])
+        
+//        present(SearchViewController(), animated: true)
     }
     
     @objc func tappedSearchProtocolButton() {
