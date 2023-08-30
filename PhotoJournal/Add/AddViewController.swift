@@ -28,6 +28,8 @@ class AddViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        APIService.shared.callRequest()
+        
         // viewDidLoad 한번만 실행되므로 observer도 한번만 등록됨
 //        NotificationCenter.default.addObserver(
 //            self,

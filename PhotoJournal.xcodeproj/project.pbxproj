@@ -30,6 +30,8 @@
 		7E6529612A9DB54A004F466B /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529602A9DB54A004F466B /* TitleViewController.swift */; };
 		7E6529632A9DC10C004F466B /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529622A9DC10C004F466B /* ContentViewController.swift */; };
 		7E6529652A9DC754004F466B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529642A9DC754004F466B /* WebViewController.swift */; };
+		7E65297F2A9EC751004F466B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65297E2A9EC751004F466B /* APIService.swift */; };
+		7E6529812A9EEBD8004F466B /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529802A9EEBD8004F466B /* URLSessionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		7E6529602A9DB54A004F466B /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		7E6529622A9DC10C004F466B /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		7E6529642A9DC754004F466B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		7E65297E2A9EC751004F466B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		7E6529802A9EEBD8004F466B /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,8 @@
 		7E65297D2A9EC725004F466B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7E65297E2A9EC751004F466B /* APIService.swift */,
+				7E6529802A9EEBD8004F466B /* URLSessionViewController.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E65290B2A9C2FEF004F466B /* AddView.swift in Sources */,
+				7E65297F2A9EC751004F466B /* APIService.swift in Sources */,
 				7E6529652A9DC754004F466B /* WebViewController.swift in Sources */,
 				7E6529222A9D7C78004F466B /* DateView.swift in Sources */,
 				7E6529632A9DC10C004F466B /* ContentViewController.swift in Sources */,
@@ -326,6 +333,7 @@
 				7E6528EF2A9C1D69004F466B /* AddViewController.swift in Sources */,
 				7E6529032A9C2421004F466B /* BaseViewController.swift in Sources */,
 				7E65290D2A9C3371004F466B /* SearchView.swift in Sources */,
+				7E6529812A9EEBD8004F466B /* URLSessionViewController.swift in Sources */,
 				7E6529082A9C2EB2004F466B /* BaseView.swift in Sources */,
 				7E6529282A9D8E9A004F466B /* DateFormat+Extension.swift in Sources */,
 				7E6528EB2A9C1D69004F466B /* AppDelegate.swift in Sources */,

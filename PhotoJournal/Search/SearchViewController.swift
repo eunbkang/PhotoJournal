@@ -25,6 +25,9 @@ class SearchViewController: BaseViewController {
         // 동작하지 않는 코드
         // addObserver보다 post가 먼저 신호를 보내면 받을 수 없음
         NotificationCenter.default.addObserver(self, selector: #selector(observedRecommendedKeywordNotification(notification:)), name: NSNotification.Name("RecommendedKeyword"), object: nil)
+        
+        searchView.searchBar.becomeFirstResponder()
+        searchView.searchBar.delegate = self
     }
     
     @objc func observedRecommendedKeywordNotification(notification: NSNotification) {
@@ -65,5 +68,11 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         delegate?.receivedImage(imageName: imageList[indexPath.item])
         
         dismiss(animated: true)
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchView.searchBar.resignFirstResponder()
     }
 }
