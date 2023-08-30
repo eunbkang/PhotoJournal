@@ -29,13 +29,13 @@ struct Photo: Codable {
     let color, blurHash: String
     let description: String?
     let altDescription: String
-    let breadcrumbs: [JSONAny]
+    let breadcrumbs: [Breadcrumb]?
     let urls: Urls
     let links: ResultLinks
     let likes: Int
     let likedByUser: Bool
     let currentUserCollections: [JSONAny]
-    let sponsorship: JSONNull?
+    let sponsorship: Sponsorship?
     let topicSubmissions: ResultTopicSubmissions?
     let user: User
     let tags: [Tag]?
@@ -67,6 +67,13 @@ struct ResultLinks: Codable {
         case html, download
         case downloadLocation = "download_location"
     }
+}
+
+// MARK: - Breadcrumb
+struct Breadcrumb: Codable {
+    let slug, title: String
+    let index: Int
+    let type: String
 }
 
 // MARK: - Tag
@@ -116,13 +123,13 @@ struct CoverPhoto: Codable {
     let color, blurHash: String
     let description: String?
     let altDescription: String
-    let breadcrumbs: [JSONAny]
+    let breadcrumbs: [Breadcrumb]?
     let urls: Urls
     let links: ResultLinks
     let likes: Int
     let likedByUser: Bool
     let currentUserCollections: [JSONAny]
-    let sponsorship: JSONNull?
+    let sponsorship: Sponsorship?
     let topicSubmissions: CoverPhotoTopicSubmissions
     let premium: Bool?
     let plus: Bool?
@@ -191,6 +198,21 @@ struct Urls: Codable {
     }
 }
 
+// MARK: - Sponsorship
+struct Sponsorship: Codable {
+    let impressionUrls: [String]
+    let tagline: String
+    let taglineURL: String
+    let sponsor: User
+
+    enum CodingKeys: String, CodingKey {
+        case impressionUrls = "impression_urls"
+        case tagline
+        case taglineURL = "tagline_url"
+        case sponsor
+    }
+}
+
 // MARK: - User
 struct User: Codable {
     let id: String
@@ -247,7 +269,7 @@ struct Social: Codable {
     let instagramUsername: String?
     let portfolioURL: String?
     let twitterUsername: String?
-    let paypalEmail: JSONNull?
+    let paypalEmail: String?
 
     enum CodingKeys: String, CodingKey {
         case instagramUsername = "instagram_username"

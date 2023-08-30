@@ -12,7 +12,7 @@ class SearchCollectionViewCell: BaseCollectionViewCell {
     
     let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .lightGray
+        imageView.backgroundColor = .systemGray6
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         
