@@ -19,7 +19,6 @@ class SearchView: BaseView {
     lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: configCollectionViewLayout())
         view.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: SearchCollectionViewCell.identifier)
-//        view.collectionViewLayout = configCollectionViewLayout()
         
         return view
     }()
@@ -48,7 +47,7 @@ class SearchView: BaseView {
 
         let inset: CGFloat = 16
         let spacing: CGFloat = 8
-        let width = (UIScreen.main.bounds.width - (spacing * 3) - (inset * 2)) / 4
+        let width = (UIScreen.main.bounds.width - (spacing * 3) - (inset * 2)) / 3
 
         layout.itemSize = CGSize(width: width, height: width)
         layout.sectionInset = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)

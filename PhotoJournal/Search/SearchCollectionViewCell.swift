@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchCollectionViewCell: BaseCollectionViewCell {
     
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .lightGray
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         
         return imageView
     }()
@@ -23,7 +25,13 @@ class SearchCollectionViewCell: BaseCollectionViewCell {
     
     override func configLayoutConstraints() {
         imageView.snp.makeConstraints { make in
-            make.edges.equalTo(contentView)
+            make.verticalEdges.horizontalEdges.equalToSuperview()
+        }
+    }
+    
+    func setDataToView(photo: Photo) {
+        if let url = URL(string: photo.urls.smallS3) {
+            imageView.kf.setImage(with: url)
         }
     }
 }

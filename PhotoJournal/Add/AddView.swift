@@ -12,7 +12,8 @@ class AddView: BaseView {
     let photoImageView: UIImageView = {
         let view = UIImageView()
         view.backgroundColor = .lightGray
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
         
         return view
     }()

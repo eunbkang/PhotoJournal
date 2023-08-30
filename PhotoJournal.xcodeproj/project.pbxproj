@@ -33,6 +33,11 @@
 		7E65297F2A9EC751004F466B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65297E2A9EC751004F466B /* APIService.swift */; };
 		7E6529812A9EEBD8004F466B /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529802A9EEBD8004F466B /* URLSessionViewController.swift */; };
 		7E6529832A9F6E75004F466B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7E6529822A9F6E75004F466B /* .gitignore */; };
+		7E6529852A9F6E98004F466B /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529842A9F6E98004F466B /* APIKey.swift */; };
+		7E6529872A9F6EC3004F466B /* UnsplashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529862A9F6EC3004F466B /* UnsplashManager.swift */; };
+		7E6529892A9F6F26004F466B /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529882A9F6F26004F466B /* URL+Extension.swift */; };
+		7E65298C2A9F719E004F466B /* SearchedPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65298B2A9F719E004F466B /* SearchedPhotos.swift */; };
+		7E65298F2A9F78E4004F466B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7E65298E2A9F78E4004F466B /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,10 @@
 		7E65297E2A9EC751004F466B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		7E6529802A9EEBD8004F466B /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
 		7E6529822A9F6E75004F466B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7E6529842A9F6E98004F466B /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		7E6529862A9F6EC3004F466B /* UnsplashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashManager.swift; sourceTree = "<group>"; };
+		7E6529882A9F6F26004F466B /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		7E65298B2A9F719E004F466B /* SearchedPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedPhotos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E65298F2A9F78E4004F466B /* Kingfisher in Frameworks */,
 				7E65295B2A9D9BBF004F466B /* SeSACPhotoFramework.framework in Frameworks */,
 				7E6529002A9C1E1F004F466B /* SnapKit in Frameworks */,
 			);
@@ -129,6 +139,7 @@
 		7E6528E92A9C1D69004F466B /* PhotoJournal */ = {
 			isa = PBXGroup;
 			children = (
+				7E65298A2A9F718B004F466B /* Model */,
 				7E65297D2A9EC725004F466B /* Network */,
 				7E65291E2A9D7BB5004F466B /* Extension */,
 				7E6529142A9C38FF004F466B /* Protocol */,
@@ -192,6 +203,7 @@
 			children = (
 				7E65291F2A9D7BD4004F466B /* NSNotification+Extension.swift */,
 				7E6529272A9D8E9A004F466B /* DateFormat+Extension.swift */,
+				7E6529882A9F6F26004F466B /* URL+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -217,8 +229,18 @@
 			children = (
 				7E65297E2A9EC751004F466B /* APIService.swift */,
 				7E6529802A9EEBD8004F466B /* URLSessionViewController.swift */,
+				7E6529842A9F6E98004F466B /* APIKey.swift */,
+				7E6529862A9F6EC3004F466B /* UnsplashManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		7E65298A2A9F718B004F466B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E65298B2A9F719E004F466B /* SearchedPhotos.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +262,7 @@
 			name = PhotoJournal;
 			packageProductDependencies = (
 				7E6528FF2A9C1E1F004F466B /* SnapKit */,
+				7E65298E2A9F78E4004F466B /* Kingfisher */,
 			);
 			productName = PhotoJournal;
 			productReference = 7E6528E72A9C1D69004F466B /* PhotoJournal.app */;
@@ -271,6 +294,7 @@
 			mainGroup = 7E6528DE2A9C1D69004F466B;
 			packageReferences = (
 				7E6528FE2A9C1E1F004F466B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7E65298D2A9F78E4004F466B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 7E6528E82A9C1D69004F466B /* Products */;
 			projectDirPath = "";
@@ -323,6 +347,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E65290B2A9C2FEF004F466B /* AddView.swift in Sources */,
+				7E6529872A9F6EC3004F466B /* UnsplashManager.swift in Sources */,
+				7E6529852A9F6E98004F466B /* APIKey.swift in Sources */,
+				7E65298C2A9F719E004F466B /* SearchedPhotos.swift in Sources */,
 				7E65297F2A9EC751004F466B /* APIService.swift in Sources */,
 				7E6529652A9DC754004F466B /* WebViewController.swift in Sources */,
 				7E6529222A9D7C78004F466B /* DateView.swift in Sources */,
@@ -341,6 +368,7 @@
 				7E6529082A9C2EB2004F466B /* BaseView.swift in Sources */,
 				7E6529282A9D8E9A004F466B /* DateFormat+Extension.swift in Sources */,
 				7E6528EB2A9C1D69004F466B /* AppDelegate.swift in Sources */,
+				7E6529892A9F6F26004F466B /* URL+Extension.swift in Sources */,
 				7E6528ED2A9C1D69004F466B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +593,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		7E65298D2A9F78E4004F466B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -572,6 +608,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E6528FE2A9C1E1F004F466B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		7E65298E2A9F78E4004F466B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E65298D2A9F78E4004F466B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 import SeSACPhotoFramework
 
 // Protocol 값 전달 1.
@@ -14,7 +15,7 @@ protocol PassDataDelegate {
 }
 
 protocol PassSearchedImageDelegate {
-    func receivedImage(imageName: String)
+    func receivedImage(photo: Photo)
 }
 
 class AddViewController: BaseViewController {
@@ -28,21 +29,6 @@ class AddViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        APIService.shared.callRequest()
-        
-        // viewDidLoad 한번만 실행되므로 observer도 한번만 등록됨
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(observedSelectedImageNotification),
-//            name: NSNotification.Name("SelectedImage"),
-//            object: nil
-//        )
-        
-//        ClassOpenExample.publicExample()
-//        ClassPublicExample.publicExample()
-//        ClassPublicExample.internalExample()
-//        ClassInternalExample
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,8 +40,6 @@ class AddViewController: BaseViewController {
             name: .selectedImage,
             object: nil
         )
-        
-//        sesacShowActivityViewController(image: UIImage(systemName: "star")!, url: "hello", text: "hi")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -66,9 +50,6 @@ class AddViewController: BaseViewController {
     }
     
     @objc func observedSelectedImageNotification(notification: NSNotification) {
-        print(#function)
-//        print(notification.userInfo?["name"])
-//        print(notification.userInfo?["sample"])
         
         if let name = notification.userInfo?["name"] as? String {
             addView.photoImageView.image = UIImage(systemName: name)
@@ -90,7 +71,11 @@ class AddViewController: BaseViewController {
             
         }
         let web = UIAlertAction(title: "웹에서 검색하기", style: .default) { _ in
-            self.present(SearchViewController(), animated: true)
+            
+            let vc = SearchViewController()
+            vc.delegate = self
+            
+            self.present(vc, animated: true)
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel)
         
@@ -99,12 +84,6 @@ class AddViewController: BaseViewController {
         }
         
         present(actionSheet, animated: true)
-        
-//        let words = ["Apple", "Banana", "Cookie", "Doll", "Egg"]
-        
-//        NotificationCenter.default.post(name: NSNotification.Name("RecommendedKeyword"), object: nil, userInfo: ["keyword": words.randomElement()!])
-        
-//        present(SearchViewController(), animated: true)
     }
     
     @objc func tappedSearchProtocolButton() {
@@ -160,7 +139,9 @@ extension AddViewController: PassDataDelegate {
 }
 
 extension AddViewController: PassSearchedImageDelegate {
-    func receivedImage(imageName: String) {
-        addView.photoImageView.image = UIImage(systemName: imageName)
+    func receivedImage(photo: Photo) {
+        if let url = URL(string: photo.urls.small) {
+            addView.photoImageView.kf.setImage(with: url)
+        }
     }
 }
