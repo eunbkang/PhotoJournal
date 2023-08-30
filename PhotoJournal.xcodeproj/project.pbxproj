@@ -38,6 +38,8 @@
 		7E6529892A9F6F26004F466B /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529882A9F6F26004F466B /* URL+Extension.swift */; };
 		7E65298C2A9F719E004F466B /* SearchedPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65298B2A9F719E004F466B /* SearchedPhotos.swift */; };
 		7E65298F2A9F78E4004F466B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7E65298E2A9F78E4004F466B /* Kingfisher */; };
+		7E6529912A9F8BC1004F466B /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529902A9F8BC1004F466B /* UIButton+Extension.swift */; };
+		7E6529962A9F8E9E004F466B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6529952A9F8E9E004F466B /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		7E6529862A9F6EC3004F466B /* UnsplashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashManager.swift; sourceTree = "<group>"; };
 		7E6529882A9F6F26004F466B /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		7E65298B2A9F719E004F466B /* SearchedPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedPhotos.swift; sourceTree = "<group>"; };
+		7E6529902A9F8BC1004F466B /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		7E6529952A9F8E9E004F466B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,8 @@
 				7E65291F2A9D7BD4004F466B /* NSNotification+Extension.swift */,
 				7E6529272A9D8E9A004F466B /* DateFormat+Extension.swift */,
 				7E6529882A9F6F26004F466B /* URL+Extension.swift */,
+				7E6529902A9F8BC1004F466B /* UIButton+Extension.swift */,
+				7E6529952A9F8E9E004F466B /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -354,11 +360,13 @@
 				7E6529652A9DC754004F466B /* WebViewController.swift in Sources */,
 				7E6529222A9D7C78004F466B /* DateView.swift in Sources */,
 				7E6529632A9DC10C004F466B /* ContentViewController.swift in Sources */,
+				7E6529912A9F8BC1004F466B /* UIButton+Extension.swift in Sources */,
 				7E6529242A9D7DB5004F466B /* DateViewController.swift in Sources */,
 				7E6529112A9C37DB004F466B /* ReusableViewProtocol.swift in Sources */,
 				7E6529132A9C37FB004F466B /* SearchCollectionViewCell.swift in Sources */,
 				7E6529612A9DB54A004F466B /* TitleViewController.swift in Sources */,
 				7E6529062A9C274C004F466B /* SearchViewController.swift in Sources */,
+				7E6529962A9F8E9E004F466B /* UIView+Extension.swift in Sources */,
 				7E65290F2A9C3660004F466B /* BaseCollectionViewCell.swift in Sources */,
 				7E6529202A9D7BD4004F466B /* NSNotification+Extension.swift in Sources */,
 				7E6528EF2A9C1D69004F466B /* AddViewController.swift in Sources */,

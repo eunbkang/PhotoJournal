@@ -11,7 +11,7 @@ class AddView: BaseView {
     
     let photoImageView: UIImageView = {
         let view = UIImageView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemGray6
         view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
         
@@ -20,7 +20,8 @@ class AddView: BaseView {
     
     let searchButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .systemTeal
+        button.configButton(title: nil, image: "photo", imageSize: 17)
+        button.configShadow()
         
         return button
     }()
@@ -34,26 +35,24 @@ class AddView: BaseView {
     
     let dateButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .systemTeal
-        button.setTitle(DateFormatter.today(), for: .normal)
+        button.configButton(title: DateFormatter.today(), image: nil)
+        button.configShadow()
         
         return button
     }()
     
     let titleButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .systemPink
-        button.setTitle("오늘의 사진", for: .normal)
-        button.tintColor = .white
+        button.configButton(title: "제목", image: nil)
+        button.configShadow()
         
         return button
     }()
     
     let contentButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .systemPurple
-        button.setTitle("사진 설명", for: .normal)
-        button.tintColor = .white
+        button.configButton(title: "내용", image: nil)
+        button.configShadow()
         
         return button
     }()
@@ -69,35 +68,35 @@ class AddView: BaseView {
     
     override func configLayoutConstraints() {
         photoImageView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalTo(self.safeAreaLayoutGuide).inset(16)
+            make.top.leading.trailing.equalTo(self.safeAreaLayoutGuide)
             make.height.equalTo(photoImageView.snp.width).multipliedBy(0.7)
         }
         
         searchButton.snp.makeConstraints { make in
             make.size.equalTo(50)
-            make.bottom.trailing.equalTo(photoImageView)
+            make.bottom.trailing.equalTo(photoImageView).inset(8)
         }
         
         searchProtocolButton.snp.makeConstraints { make in
             make.size.equalTo(50)
-            make.leading.bottom.equalTo(photoImageView)
+            make.leading.bottom.equalTo(photoImageView).inset(8)
         }
         
         dateButton.snp.makeConstraints { make in
             make.top.equalTo(photoImageView.snp.bottom).offset(12)
-            make.horizontalEdges.equalTo(photoImageView)
+            make.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(16)
             make.height.equalTo(48)
         }
         
         titleButton.snp.makeConstraints { make in
             make.top.equalTo(dateButton.snp.bottom).offset(12)
-            make.horizontalEdges.equalTo(photoImageView)
+            make.horizontalEdges.equalTo(dateButton)
             make.height.equalTo(dateButton)
         }
         
         contentButton.snp.makeConstraints { make in
             make.top.equalTo(titleButton.snp.bottom).offset(12)
-            make.horizontalEdges.equalTo(photoImageView)
+            make.horizontalEdges.equalTo(dateButton)
             make.height.equalTo(150)
         }
     }
